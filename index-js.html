@@ -3,112 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JavaScript 기초입문</title>
+  <title>파이썬 입문 강의</title>
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
     }
-    h1, h2 {
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    .layout {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .tabs {
+      width: 240px;
+      background-color: #34495e;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .tab {
+      padding: 1rem;
+      color: white;
+      cursor: pointer;
+      border-left: 5px solid transparent;
+    }
+    .tab:hover { background-color: #3d566e; }
+    .tab.active {
+      background-color: #ecf0f1;
       color: #2c3e50;
+      font-weight: bold;
+      border-left: 5px solid #3498db;
     }
-    code {
-      background: #eee;
-      padding: 3px 5px;
-      border-radius: 4px;
-      display: block;
-      margin: 10px 0;
-      white-space: pre;
+    .tab-content-area {
+      flex: 1;
+      background-color: white;
+      padding: 2rem;
+      overflow-y: auto;
     }
-    .section {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    pre { background: #eee; padding: 10px; border-radius: 6px; }
   </style>
 </head>
 <body>
-  <h1>JavaScript 기초입문</h1>
-
-  <div class="section">
-    <h2>JavaScript란?</h2>
-    <p>Java ≠ JavaScript ❌</p>
-    <p>JavaScript는 HTML, CSS와 함께 웹 개발의 핵심 요소입니다.</p>
-    <p>JavaScript는 프론트엔드(화면), 백엔드(서버, DB) 모두에서 사용됩니다. 예: Node.js, React.js, Angular.js</p>
+  <header>🐍 파이썬 입문 강의</header>
+  <div class="layout">
+    <div class="tabs" id="tabList">
+      <!-- 탭 목록은 JavaScript로 동적으로 추가됨 -->
+    </div>
+    <div class="tab-content-area" id="tabContents">
+      <!-- 탭 콘텐츠는 JavaScript로 동적으로 추가됨 -->
+    </div>
   </div>
+  <script>
+    const chapters = [
+      { title: "Chapter 1", subtitle: "파이썬 설치하기", content: `
+        <h2>Chapter 1. 파이썬 설치하기</h2>
+        <ul>
+          <li><a href='https://www.python.org/downloads/' target='_blank'>파이썬 공식 사이트</a>에서 설치</li>
+          <li>설치 시 "Add Python to PATH" 꼭 체크</li>
+          <li>IDLE 또는 명령 프롬프트 실행</li>
+          <li>파일 탐색기 → 보기 → <b>확장자명 보기</b> 및 <b>숨긴 항목 보기</b> 설정</li>
+        </ul>` },
+      { title: "Chapter 2", subtitle: "파이썬 시작하기", content: `
+        <h2>Chapter 2. 파이썬 시작하기</h2>
+        <ul>
+          <li>2-1. 계산하기: <code>print(3 + 5)</code></li>
+          <li>2-2. 문자열 출력하기: <code>print("안녕하세요")</code></li>
+          <li>2-3. 캘린더 출력: <pre>import calendar\nprint(calendar.month(2020, 1))</pre></li>
+          <li>2-4. 프로그래밍 준비: IDLE 또는 CMD 실행</li>
+          <li>2-5. 프로그래밍 작성: .py 파일 저장 후 실행</li>
+          <li>2-6. 입출력 명령어: <code>input()</code>, <code>print()</code></li>
+          <li>2-7. 프로그램 작성 방법: 주석, 코드 작성, 실행</li>
+        </ul>` },
+      { title: "Chapter 3", subtitle: "프로그래밍 기초", content: `
+        <h2>Chapter 3. 프로그래밍 기초</h2>
+        <ul>
+          <li>변수, 자료형</li>
+          <li>조건문: if, elif, else</li>
+          <li>반복문: for, while</li>
+          <li>리스트, 딕셔너리, 튜플</li>
+        </ul>` },
+      { title: "Chapter 4", subtitle: "import 사용법", content: `
+        <h2>Chapter 4. import 사용법</h2>
+        <pre>import math\nprint(math.sqrt(16))\n\nimport random\nprint(random.randint(1, 10))</pre>` },
+      { title: "Chapter 5", subtitle: "CUI 미니게임", content: `
+        <h2>Chapter 5. CUI로 미니 게임 만들기</h2>
+        <pre># 숫자 맞추기 게임\nimport random\nnum = random.randint(1, 10)\nguess = int(input("숫자 입력: "))\nif guess == num:\n  print("정답!")\nelse:\n  print("틀렸습니다. 정답은", num)</pre>` },
+      { title: "Chapter 6", subtitle: "GUI 기초 1", content: `
+        <h2>Chapter 6. GUI 기초 1</h2>
+        <pre>import tkinter as tk\nroot = tk.Tk()\nlabel = tk.Label(root, text="Hello GUI")\nlabel.pack()\nroot.mainloop()</pre>` },
+      { title: "Chapter 7", subtitle: "GUI 기초 2", content: `
+        <h2>Chapter 7. GUI 기초 2</h2>
+        <pre>import tkinter as tk\ndef say_hello():\n  label.config(text="안녕하세요!")\n\nroot = tk.Tk()\nlabel = tk.Label(root, text="")\nlabel.pack()\nbtn = tk.Button(root, text="클릭", command=say_hello)\nbtn.pack()\nroot.mainloop()</pre>` },
+      { title: "Chapter 8", subtitle: "게임 개발 기술", content: `<h2>Chapter 8. 기본적인 게임 개발 기술</h2><p>좌표, 충돌 처리, 시간 제어, 키보드 이벤트 처리 등</p>` },
+      { title: "Chapter 9", subtitle: "블록 낙하 게임", content: `<h2>Chapter 9. 블록 낙하 게임 만들기</h2><p>pygame을 활용하여 테트리스 구현 기초</p>` },
+      { title: "Chapter 10", subtitle: "Pygame 사용법", content: `<h2>Chapter 10. Pygame 사용법</h2><p>pygame 설치, 화면 그리기, 키보드 입력 처리 등</p>` },
+      { title: "Chapter 11", subtitle: "RPG 만들기 1", content: `<h2>Chapter 11. 본격 RPG 만들기 -1</h2><p>캐릭터 이동, 맵 구성, 충돌 처리</p>` },
+      { title: "Chapter 12", subtitle: "RPG 만들기 2", content: `<h2>Chapter 12. 본격 RPG 만들기 -2</h2><p>아이템, 전투, 체력바, 대화창 구현</p>` },
+      { title: "Chapter 13", subtitle: "객체 지향 프로그래밍", content: `<h2>Chapter 13. 객체 지향 프로그래밍</h2><p>클래스, 상속, 캡슐화, 다형성</p>` }
+    ];
 
-  <div class="section">
-    <h2>🔢 변수 (Variables)</h2>
-    <p>데이터를 저장하는 공간입니다.</p>
-    <ul>
-      <li><code>let</code>: 재할당 가능, 블록 스코프</li>
-      <li><code>const</code>: 재할당 불가, 블록 스코프</li>
-      <li><code>var</code>: ES6 이전 방식</li>
-    </ul>
-  </div>
+    const tabList = document.getElementById('tabList');
+    const tabContents = document.getElementById('tabContents');
 
-  <div class="section">
-    <h2>⚡ 함수 (Functions)</h2>
-    <p>특정 작업을 수행하는 코드 묶음입니다.</p>
-    <code>
-function add(x, y) {
-  let temp = x + y;
-  return temp;
-}
+    chapters.forEach((ch, index) => {
+      const tab = document.createElement('div');
+      tab.className = 'tab' + (index === 0 ? ' active' : '');
+      tab.innerHTML = `${ch.title}<br>${ch.subtitle}`;
+      tab.onclick = (e) => changeTab(e, 'panel' + index);
+      tabList.appendChild(tab);
 
-const multiply = function(a, b) {
-  return a * b;
-}
+      const panel = document.createElement('div');
+      panel.className = 'tab-panel' + (index === 0 ? ' active' : '');
+      panel.id = 'panel' + index;
+      panel.innerHTML = ch.content;
+      tabContents.appendChild(panel);
+    });
 
-console.log(4 * 5);
-    </code>
-  </div>
+    function changeTab(e, panelId) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
 
-  <div class="section">
-    <h2>⚖️ 조건문 (Conditional Statements)</h2>
-    <p>조건에 따라 흐름을 제어합니다.</p>
-    <code>
-let score = 85;
-
-if (score >= 90) {
-  console.log("A 학점입니다.");
-} else if (score >= 80) {
-  console.log("B 학점입니다.");
-} else if (score >= 70) {
-  console.log("C 학점입니다.");
-} else if (score >= 60) {
-  console.log("D 학점입니다.");
-} else {
-  console.log("F 학점입니다.");
-}
-    </code>
-  </div>
-
-  <div class="section">
-    <h2>🔁 반복문 (Loops)</h2>
-    <p>같은 작업을 반복합니다.</p>
-    <p>예: <code>for</code> 반복문 등</p>
-  </div>
-
-  <div class="section">
-    <h2>🧺 배열 (Arrays)</h2>
-    <p>여러 데이터를 하나로 묶습니다.</p>
-    <p>메서드: <code>push()</code>, <code>pop()</code>, <code>forEach()</code> 등</p>
-  </div>
-
-  <div class="section">
-    <h2>🌟 마무리</h2>
-    <p>JavaScript 기본기를 배워봤습니다.</p>
-    <p>✨ 반복하고 직접 코드를 작성하다 보면 자연스럽게 익숙해질 거예요.</p>
-    <p>중요한 건 포기하지 않고 계속 해보는 것입니다!</p>
-    <p>수고 많으셨습니다. 감사합니다!</p>
-  </div>
+      e.currentTarget.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+  </script>
 </body>
 </html>

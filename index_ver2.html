@@ -67,12 +67,6 @@
     }
     a { color: #1a0dab; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    img.screenshot {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
   </style>
 </head>
 <body>
@@ -88,10 +82,8 @@
         <ul>
           <li>🔗 <a href='https://www.python.org/downloads/' target='_blank'>공식 웹사이트에서 다운로드</a></li>
           <li>✅ 설치 시 "Add Python to PATH" 체크</li>
-           <img src="/mnt/images/idle.png" alt="IDLE 실행 예시" class="screenshot" />
+          
           <li>💡 IDLE 또는 명령 프롬프트로 실행 가능</li>
-          <img src="/mnt/images/hiddenfiles.png" alt="hidden files예시" class="screenshot" />
-   
           <li>🗂️ 파일 탐색기 → 보기 → ✅ <b>확장자명 보기</b>, ✅ <b>숨긴 항목 보기</b> 체크</li>
         </ul>` },
       { title: "💻 Chapter 2", subtitle: "파이썬 시작하기", content: `
@@ -135,7 +127,6 @@
       { title: "🛡️ Chapter 12", subtitle: "RPG 만들기 2", content: `<h2>🛡️ Chapter 12. 본격 RPG 만들기 -2</h2><ul><li>전투 시스템</li><li>아이템 관리</li><li>체력바 구현</li></ul>` },
       { title: "🏗️ Chapter 13", subtitle: "객체 지향 프로그래밍", content: `<h2>🏗️ Chapter 13. 객체 지향 프로그래밍</h2><ul><li>클래스 & 인스턴스</li><li>상속과 캡슐화</li><li>다형성</li></ul>` }
     ];
-
 
     const tabList = document.getElementById('tabList');
     const tabContents = document.getElementById('tabContents');

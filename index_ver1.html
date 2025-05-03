@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>파이썬 입문 강의</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    .layout {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .tabs {
+      width: 200px;
+      background-color: #34495e;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .tab {
+      padding: 1rem;
+      color: white;
+      cursor: pointer;
+      border-left: 5px solid transparent;
+    }
+    .tab:hover { background-color: #3d566e; }
+    .tab.active {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      font-weight: bold;
+      border-left: 5px solid #3498db;
+    }
+    .tab-content-area {
+      flex: 1;
+      background-color: white;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    pre { background: #eee; padding: 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header>🐍 파이썬 입문 강의</header>
+  <div class="layout">
+    <div class="tabs">
+      <div class="tab active" onclick="changeTab(event, 'chapter1')">Chapter 1<br>파이썬 설치</div>
+      <div class="tab" onclick="changeTab(event, 'chapter2')">Chapter 2<br>파이썬 시작</div>
+      <div class="tab" onclick="changeTab(event, 'chapter3')">Chapter 3<br>프로그래밍 기초</div>
+      <div class="tab" onclick="changeTab(event, 'chapter4')">Chapter 4<br>import 사용법</div>
+      <div class="tab" onclick="changeTab(event, 'chapter5')">Chapter 5<br>CUI 미니게임</div>
+      <div class="tab" onclick="changeTab(event, 'chapter6')">Chapter 6<br>GUI 기초 1</div>
+      <div class="tab" onclick="changeTab(event, 'chapter7')">Chapter 7<br>GUI 기초 2</div>
+    </div>
+    <div class="tab-content-area">
+      <div id="chapter1" class="tab-panel active">
+        <h2>Chapter 1. 파이썬 설치하기</h2>
+        <ol>
+          <li><a href="https://www.python.org/downloads/" target="_blank">파이썬 공식 사이트</a>에서 설치</li>
+          <li>설치 시 "Add Python to PATH" 체크</li>
+          <li>IDLE 또는 명령 프롬프트로 실행</li>
+          <li>확장자 표시: 탐색기 > 보기 > 파일 확장자 체크</li>
+        </ol>
+      </div>
+      <div id="chapter2" class="tab-panel">
+        <h2>Chapter 2. 파이썬 시작하기</h2>
+        <pre>
+>>> print("Hello Python")
+>>> 3 + 5
+8
+        </pre>
+        <p>달력 모듈 사용:</p>
+        <pre>
+import calendar
+print(calendar.month(2020, 1))
+print(calendar.prcal(2020))
+        </pre>
+      </div>
+      <div id="chapter3" class="tab-panel">
+        <h2>Chapter 3. 프로그래밍 기초</h2>
+        <ul>
+          <li>변수와 자료형</li>
+          <li>조건문 if</li>
+          <li>반복문 for, while</li>
+          <li>리스트, 딕셔너리 등</li>
+        </ul>
+      </div>
+      <div id="chapter4" class="tab-panel">
+        <h2>Chapter 4. import 사용법</h2>
+        <pre>
+import math
+print(math.sqrt(16))
+
+import random
+print(random.randint(1, 10))
+        </pre>
+      </div>
+      <div id="chapter5" class="tab-panel">
+        <h2>Chapter 5. CUI로 미니 게임 만들기</h2>
+        <pre>
+# 숫자 맞추기 게임
+import random
+num = random.randint(1, 10)
+guess = int(input("숫자를 맞혀보세요: "))
+if guess == num:
+    print("정답!")
+else:
+    print("틀렸습니다. 정답은", num)
+        </pre>
+      </div>
+      <div id="chapter6" class="tab-panel">
+        <h2>Chapter 6. GUI 기초 1</h2>
+        <pre>
+import tkinter as tk
+root = tk.Tk()
+root.title("Hello GUI")
+label = tk.Label(root, text="Hello, Python GUI!")
+label.pack()
+root.mainloop()
+        </pre>
+      </div>
+      <div id="chapter7" class="tab-panel">
+        <h2>Chapter 7. GUI 기초 2</h2>
+        <pre>
+# 버튼 클릭 이벤트
+import tkinter as tk
+
+def say_hello():
+    label.config(text="안녕하세요!")
+
+root = tk.Tk()
+label = tk.Label(root, text="")
+label.pack()
+btn = tk.Button(root, text="클릭", command=say_hello)
+btn.pack()
+root.mainloop()
+        </pre>
+      </div>
+    </div>
+  </div>
+  <script>
+    function changeTab(event, panelId) {
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
