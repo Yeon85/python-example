@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 첫 반응형 페이지</title>
+  <style>
+    :root {
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      width: 30%;
+      min-width: 250px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* ✅ 미디어 쿼리 */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🌐 나의 반응형 웹사이트
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>📦 박스 1</h2>
+      <p>이 박스는 `rem`, `text-align`, `hover` 효과를 사용해 꾸몄습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎨 박스 2</h2>
+      <p>`flex`와 `media query`로 배치가 반응형이에요!</p>
+    </div>
+
+    <div class="card">
+      <h2>📱 박스 3</h2>
+      <p>화면이 좁아지면 박스들이 세로로 정렬됩니다.</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 정연주의 웹 연습 페이지
+  </footer>
+
+</body>
+</html>

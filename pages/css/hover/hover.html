@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 속성 + :hover 예제</title>
+  <style>
+    .card {
+      color: white;
+      background-color: #4caf50;
+      border: 2px solid #333;
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px auto;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    /* ✅ :hover 효과 */
+    .card:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+
+    .float-box {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background-color: #2196f3;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-left: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .float-box:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="float-box">float</div>
+
+  <div class="card">
+    <h2 class="underline">CSS 카드</h2>
+    <p class="strike">취소선 예제</p>
+    <p>마우스를 올려보세요!</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Step 3 연습</title>
+  <!-- css 파일이 잘 연결되어 있는지 확인 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 내부 스타일 */
+    div {
+      color: blue; /* 텍스트 색상 */
+    }
+
+    #box {
+      background-color: lightgray;
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+      border-radius: 10px;
+      font-family: 'Arial';
+      text-align: center;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    div > .child {
+      background-color: yellow;
+    }
+
+    div .descendant {
+      font-size: 14px;
+    }
+
+    div.style {
+      border: 1px dashed green;
+    }
+
+    .hover-box:hover {
+      background-color: orange;
+    }
+
+    .flex-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: lightblue;
+      padding: 5px;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: pink;
+    }
+
+    .media-box {
+      background-color: purple;
+      color: white;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .media-box {
+        background-color: green;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sticky-box">📘 CSS Step 3 연습</h1>
+
+  <div id="box">
+    나는 #id로 지정된 box입니다.<br>
+    <span class="highlight">나는 .class로 강조된 텍스트!</span><br>
+    <div class="child">나는 자식 선택자입니다.</div>
+    <div class="descendant">나는 후손 선택자입니다.</div>
+    <div class="style">나는 일치 선택자입니다.</div>
+    <div class="hover-box">마우스를 올려보세요!</div>
+  </div>
+
+  <div class="flex-box">
+    <div style="background: lightcoral; width: 100px; height: 100px;">A</div>
+    <div style="background: lightseagreen; width: 100px; height: 100px;">B</div>
+    <div style="background: lightgoldenrodyellow; width: 100px; height: 100px;">C</div>
+  </div>
+
+  <div class="absolute-box">📌 absolute 박스</div>
+  <div class="fixed-box">🧷 fixed 박스</div>
+
+  <div class="media-box">📱 이건 미디어 쿼리 박스입니다. (창 너비를 줄여보세요)</div>
+
+  <hr>
+  <h2>📝 연습문제</h2>
+  <ol>
+    <li>아이디가 box인 요소의 배경색을 파란색으로 바꾸세요</li>
+    <li>클래스가 highlight인 요소의 글자 크기를 20px로 바꾸세요</li>
+    <li>자식 선택자와 후손 선택자의 차이를 설명해보세요</li>
+  </ol>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex 속성 예제</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      background: #f4f6f8;
+    }
+
+    h2 {
+      color: #3f51b5;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: #e3f2fd;
+      padding: 1rem;
+      border: 2px solid #64b5f6;
+      border-radius: 8px;
+    }
+
+    .box {
+      background-color: #42a5f5;
+      color: white;
+      font-weight: bold;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-space-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+      height: 150px;
+    }
+
+    .gap-demo {
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>✅ display: flex 속성별 예제</h2>
+
+  <!-- 1. flex-direction: column -->
+  <div class="section">
+    <h3>1️⃣ flex-direction: column</h3>
+    <div class="flex-container column">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </div>
+
+  <!-- 2. justify-content: center -->
+  <div class="section">
+    <h3>2️⃣ justify-content: center</h3>
+    <div class="flex-container justify-center">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+    </div>
+  </div>
+
+  <!-- 3. align-items: center -->
+  <div class="section">
+    <h3>3️⃣ align-items: center</h3>
+    <div class="flex-container align-center">
+      <div class="box">Box A</div>
+      <div class="box">Box B</div>
+    </div>
+  </div>
+
+  <!-- 4. gap 속성 -->
+  <div class="section">
+    <h3>4️⃣ gap: 20px</h3>
+    <div class="flex-container gap-demo">
+      <div class="box">Box X</div>
+      <div class="box">Box Y</div>
+      <div class="box">Box Z</div>
+    </div>
+  </div>
+
+</body>
+</html>

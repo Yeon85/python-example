@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오프라인 예제 + 다운로드 링크</title>
+
+  <!-- ✅ 로컬 CSS 파일 불러오기 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/solid.min.css"> <!-- 아이콘 스타일 -->
+
+  <style>
+    body {
+      padding: 2rem;
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #3f51b5;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+
+    .download-table {
+      margin-top: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    a {
+      color: #3f51b5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ 오프라인 작동 카드 -->
+  <div class="card">
+    <h2><i class="fas fa-globe"></i> 오프라인 예제</h2>
+    <p>이 예제는 <strong>CDN 없이 로컬 파일</strong>로 동작합니다.</p>
+    <button id="clickBtn" class="btn btn-primary">
+      <i class="fas fa-hand-pointer"></i> 클릭!
+    </button>
+  </div>
+
+  <!-- ✅ 다운로드 링크 표 -->
+  <div class="download-table">
+    <h4 style="margin-bottom: 1rem;">📁 필요한 파일 다운로드 링크</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>라이브러리</th>
+          <th>다운로드 링크</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🎨 Bootstrap CSS</td>
+          <td>
+            <a href="https://getbootstrap.com" target="_blank">
+              getbootstrap.com → Download → <code>bootstrap.min.css</code>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>💡 jQuery</td>
+          <td>
+            <a href="https://jquery.com/download/" target="_blank">
+              jquery.com → Download → <code>jquery.min.js</code>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>✨ Font Awesome</td>
+          <td>
+            <a href="https://fontawesome.com" target="_blank">
+              fontawesome.com → Download Free
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ✅ 로컬 JS 파일 불러오기 -->
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $('#clickBtn').on('click', function () {
+      alert('✅ jQuery 로컬 파일이 작동합니다!');
+    });
+  </script>
+
+</body>
+</html>

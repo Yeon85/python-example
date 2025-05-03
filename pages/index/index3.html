@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📁 CSS 예제 디렉토리</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4caf50;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 6px 0;
+      line-height: 1.6;
+    }
+
+    .folder {
+      font-weight: bold;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    .folder::before {
+      content: "📁 ";
+    }
+
+    .file a {
+      text-decoration: none;
+      color: #2196f3;
+    }
+
+    .file a:hover {
+      text-decoration: underline;
+    }
+
+    .file::before {
+      content: "📄 ";
+      margin-right: 4px;
+    }
+
+    .section {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 CSS 예제 디렉토리</h1>
+
+  <div class="section">
+    <div class="folder">css</div>
+    <ul>
+      <li class="folder">단위</li>
+      <ul>
+        <li class="folder">align-items</li>
+        <ul>
+          <li class="file"><a href="/pages/css/align-items/css-align-items.html">css-align-items.html</a></li>
+        </ul>
+      </ul>
+
+      <li class="folder">css-basic</li>
+      <ul>
+        <li class="file"><a href="/pages/css/css-basic/css-component.html">css-component.html</a></li>
+      </ul>
+
+      <li class="folder">flex-direction</li>
+      <ul>
+        <li class="file"><a href="/pages/css/flex-direction/flex-direction.html">flex-direction.html</a></li>
+        <li class="file"><a href="/pages/css/flex-direction/flex-direction2.html">flex-direction2.html</a></li>
+      </ul>
+
+      <li class="folder">float</li>
+      <ul>
+        <li class="file"><a href="/pages/css/float/float-align.html">float-align.html</a></li>
+        <li class="file"><a href="/pages/css/float/float.html">float.html</a></li>
+      </ul>
+
+      <li class="file"><a href="/pages/css/font-family/index.html">font-family</a></li>
+      <li class="file"><a href="/pages/css/hover/index.html">hover</a></li>
+      <li class="file"><a href="/pages/css/justify-content/index.html">justify-content</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

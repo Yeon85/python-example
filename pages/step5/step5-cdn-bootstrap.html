@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 5: CDN & Bootstrap</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <style>
+    body {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #3f51b5;
+    }
+
+    .card {
+      margin-bottom: 1.5rem;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    code {
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔧 Step 5: CDN & Bootstrap</h1>
+
+  <!-- ✅ CDN이란? -->
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      📡 CDN이란?
+    </div>
+    <div class="card-body">
+      <p>CDN(Content Delivery Network)은 전 세계 여러 서버에 분산된 파일(이미지, CSS, JS 등)을 빠르게 다운로드할 수 있게 해주는 기술입니다.</p>
+      <ul>
+        <li>웹사이트 로딩 속도 향상</li>
+        <li>트래픽 분산</li>
+        <li>전 세계 어디서든 빠르게 접근 가능</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ✅ CDN 적용 방법 -->
+  <div class="card">
+    <div class="card-header bg-success text-white">
+      🛠️ CDN 적용 방법
+    </div>
+    <div class="card-body">
+      <p>CDN을 사용하면 <code>&lt;link&gt;</code> 또는 <code>&lt;script&gt;</code> 태그로 외부 파일을 가져올 수 있어요.</p>
+      <p>예: Bootstrap의 CSS 파일을 불러올 경우</p>
+      <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- ✅ 부트스트랩이란? -->
+  <div class="card">
+    <div class="card-header bg-warning text-dark">
+      🎨 부트스트랩이란?
+    </div>
+    <div class="card-body">
+      <p>Bootstrap은 HTML, CSS, JavaScript 기반의 웹 UI 프레임워크입니다.</p>
+      <ul>
+        <li>반응형 웹을 빠르게 만들 수 있음</li>
+        <li>버튼, 카드, 모달 등 다양한 컴포넌트 제공</li>
+        <li>CSS 유틸리티 클래스가 풍부함</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ✅ 내 웹사이트에 부트스트랩 적용하기 -->
+  <div class="card">
+    <div class="card-header bg-info text-white">
+      ⚙️ 내 웹사이트에 부트스트랩 적용하기
+    </div>
+    <div class="card-body">
+      <p>CDN으로 부트스트랩을 사용하는 가장 쉬운 방법은 <code>&lt;head&gt;</code>에 링크를 추가하는 것입니다.</p>
+
+      <h6>1. CSS 링크</h6>
+      <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+
+      <h6>2. JS (인터랙션 기능 사용 시 필수)</h6>
+      <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+
+      <a href="/pages/bootstrap/bootstrap.html">
+        <h6>3. 실제 사용 예시</h6>
+      </a>
+      <pre><code>&lt;button class="btn btn-primary"&gt;부트스트랩 버튼&lt;/button&gt;</code></pre>
+
+      
+    </div>
+  </div>
+
+</body>
+</html>

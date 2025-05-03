@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>탭 구조 메인 페이지</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .main-layout {
+      display: flex;
+      height: calc(100vh - 80px); /* header 높이 제외 */
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #f0f0f0;
+      border-right: 1px solid #ccc;
+      padding: 1rem;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: none;
+      background: #ffffff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .sidebar button:hover {
+      background: #d0e8d0;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🌐 정연주의 탭형 웹사이트
+  </header>
+
+  <div class="main-layout">
+    <div class="sidebar">
+      <button onclick="showTab('tab1')">📦 박스 1</button>
+      <button onclick="showTab('tab2')">🎨 박스 2</button>
+      <button onclick="showTab('tab3')">📱 박스 3</button>
+    </div>
+
+    <div class="content">
+      <div id="tab1" class="tab-content active">
+        <h2>📦 박스 1</h2>
+        <p>이 박스는 rem, text-align, hover 효과를 사용해 꾸몄습니다.</p>
+      </div>
+      <div id="tab2" class="tab-content">
+        <h2>🎨 박스 2</h2>
+        <p>flex와 media query로 배치가 반응형이에요!</p>
+      </div>
+      <div id="tab3" class="tab-content">
+        <h2>📱 박스 3</h2>
+        <p>화면이 좁아지면 박스들이 세로로 정렬됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 정연주의 웹 연습 페이지
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>

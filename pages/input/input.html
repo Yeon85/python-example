@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Input 예제</title>
+</head>
+<body>
+  <h1>Input 태그 예제</h1>
+
+  <!-- 텍스트 입력 -->
+  <label for="name">이름:</label>
+  <input type="text" id="name" name="name" placeholder="이름을 입력하세요"><br><br>
+
+  <!-- 이메일 입력 -->
+  <label for="email">이메일:</label>
+  <input type="email" id="email" name="email" placeholder="example@email.com"><br><br>
+
+  <!-- 비밀번호 입력 -->
+  <label for="password">비밀번호:</label>
+  <input type="password" id="password" name="password"><br><br>
+
+  <!-- 숫자 입력 -->
+  <label for="age">나이:</label>
+  <input type="number" id="age" name="age" min="1" max="100"><br><br>
+
+  <!-- 날짜 선택 -->
+  <label for="date">날짜 선택:</label>
+  <input type="date" id="date" name="date"><br><br>
+
+  <!-- 체크박스 -->
+  <label><input type="checkbox" name="agree"> 약관에 동의합니다</label><br><br>
+
+  <!-- 라디오 버튼 -->
+  <p>성별:</p>
+  <label><input type="radio" name="gender" value="male"> 남성</label>
+  <label><input type="radio" name="gender" value="female"> 여성</label><br><br>
+
+  <!-- 파일 업로드 -->
+  <label for="file">파일 업로드:</label>
+  <input type="file" id="file" name="file"><br><br>
+
+  <!-- 버튼 -->
+  <input type="submit" value="제출">
+</body>
+</html>

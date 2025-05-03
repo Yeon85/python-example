@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>단위 비교 예제</title>
+  <style>
+    body {
+      font-size: 16px; /* rem과 em 기준 */
+    }
+
+    .unit-box {
+      margin: 20px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .px {
+      width: 200px;
+      height: 100px;
+      background-color: #f44336;
+    }
+
+    .percent {
+      width: 50%;
+      height: 100px;
+      background-color: #2196f3;
+    }
+
+    .em {
+      width: 20em; /* 16px * 20 = 320px */
+      height: 5em;
+      background-color: #4caf50;
+    }
+
+    .rem {
+      width: 20rem; /* html 기준 폰트 * 20 ->16px * 20 = 320px */
+      height: 5rem;
+      background-color: #ff9800;
+    }
+
+    .vhvw {
+      width: 50vw;
+      height: 20vh;
+      background-color: #9c27b0;
+    }
+
+    .in {
+      width: 2in;
+      height: 1in;
+      background-color: #795548;
+    }
+
+    .cm {
+      width: 5cm;
+      height: 3cm;
+      background-color: #607d8b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="unit-box px">📏 200px × 100px</div>
+  <div class="unit-box percent">📐 50% 너비 (부모 기준)</div>
+  <div class="unit-box em">🅴 20em × 5em (폰트 기준)</div>
+  <div class="unit-box rem">🆁 20rem × 5rem (html 기준)</div>
+  <div class="unit-box vhvw">🌐 50vw × 20vh (뷰포트 기준)</div>
+  <div class="unit-box in">📦 2in × 1in (인치)</div>
+  <div class="unit-box cm">📦 5cm × 3cm (센티미터)</div>
+
+</body>
+</html>
+

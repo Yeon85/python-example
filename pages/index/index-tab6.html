@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>오른쪽 탭 인덱스 UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #3f51b5;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: row;/*row-reverse;  탭 오른쪽으로 */
+      min-height: calc(100vh - 100px);
+    }
+
+    .tabs {
+  width: 160px; /* ← 좁게 */
+  background-color: #3f51b5;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+    }
+  .tab {
+  padding: 0.7rem 1rem; /* ← 여백 줄임 */
+  font-size: 0.95rem;   /* ← 폰트 작게 */
+}
+
+.tab-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.tab-subtitle {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+    .tab:hover {
+      background-color: #5c6bc0;
+    }
+
+    .tab.active {
+      background-color: white;
+      color: #3f51b5;
+      font-weight: bold;
+      border-right: 5px solid #3f51b5;
+    }
+
+    .tab-title {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .tab-subtitle {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+
+    .tab-content-area {
+      flex: 1;
+      background-color: white;
+      padding: 2rem 3rem;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .tabs {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .tab {
+        flex: 1;
+        text-align: center;
+        border-right: none;
+        border-bottom: 3px solid transparent;
+      }
+
+      .tab.active {
+        border-bottom: 3px solid #3f51b5;
+        background-color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    📚 정연주의 인덱스 탭 페이지
+  </header>
+
+  <div class="layout">
+    <div class="tabs">
+      <div class="tab active" onclick="changeTab(event, 'panel1')">
+        <div class="tab-title">📦 박스 1</div>
+        <div class="tab-subtitle">rem, hover</div>
+      </div>
+      <div class="tab" onclick="changeTab(event, 'panel2')">
+        <div class="tab-title">🎨 박스 2</div>
+        <div class="tab-subtitle">반응형</div>
+      </div>
+      <div class="tab" onclick="changeTab(event, 'panel3')">
+        <div class="tab-title">📱 박스 3</div>
+        <div class="tab-subtitle">세로 정렬</div>
+      </div>
+      <div class="tab" onclick="changeTab(event, 'panel4')">
+        <div class="tab-title">💡 박스 4</div>
+        <div class="tab-subtitle">아이디어</div>
+      </div>
+      <div class="tab" onclick="changeTab(event, 'panel5')">
+        <div class="tab-title">🔧 박스 5</div>
+        <div class="tab-subtitle">설정</div>
+      </div>
+      <div class="tab" onclick="changeTab(event, 'panel6')">
+        <div class="tab-title">🧪 박스 6</div>
+        <div class="tab-subtitle">테스트</div>
+      </div>
+    </div>
+
+    <div class="tab-content-area">
+      <div id="panel1" class="tab-panel active">
+        <h2>📦 박스 1</h2>
+        <p>이 박스는 <code>rem</code>, <code>text-align</code>, <code>hover</code> 효과를 사용해 꾸몄습니다.</p>
+      </div>
+      <div id="panel2" class="tab-panel">
+        <h2>🎨 박스 2</h2>
+        <p><code>flex</code>와 <code>media query</code>로 구성된 반응형 구조입니다.</p>
+      </div>
+      <div id="panel3" class="tab-panel">
+        <h2>📱 박스 3</h2>
+        <p>화면이 좁아지면 박스들이 자동으로 세로로 정렬됩니다.</p>
+      </div>
+      <div id="panel4" class="tab-panel">
+        <h2>💡 박스 4</h2>
+        <p>창의적인 기능이나 아이디어를 정리할 수 있는 탭입니다.</p>
+      </div>
+      <div id="panel5" class="tab-panel">
+        <h2>🔧 박스 5</h2>
+        <p>설정과 환경 구성을 다루는 콘텐츠를 담을 수 있어요.</p>
+      </div>
+      <div id="panel6" class="tab-panel">
+        <h2>🧪 박스 6</h2>
+        <p>기능 테스트나 실험적인 요소를 넣는 공간입니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 정연주의 웹 연습 페이지
+  </footer>
+
+  <script>
+    function changeTab(e, panelId) {
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      panels.forEach(panel => panel.classList.remove('active'));
+
+      e.currentTarget.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

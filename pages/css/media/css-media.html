@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 속성 + :hover + 미디어쿼리</title>
+  <style>
+    .card {
+      color: white;
+      background-color: #4caf50;
+      border: 2px solid #333;
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px auto;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+
+    .float-box {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background-color: #2196f3;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-left: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .float-box:hover {
+      background-color: #1565c0;
+    }
+
+    /* ✅ 미디어 쿼리 - 모바일용 (최대 너비 480px) */
+    @media (max-width: 480px) {
+      .card {
+        width: 90%;
+        height: auto;
+        font-size: 8px;
+        padding: 8px;
+        background-color: #ff9800;
+      }
+
+      .float-box {
+        float: none;
+        margin: 10px auto;
+        background-color: #f44336;
+      }
+
+      .card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="float-box">float</div>
+
+  <div class="card">
+    <h2 class="underline">CSS 카드</h2>
+    <p class="strike">취소선 예제</p>
+    <p>📱 모바일에선 배경색이 주황색!</p>
+  </div>
+
+</body>
+</html>

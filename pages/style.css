@@ -1,0 +1,16 @@
+
+
+    table 
+    {
+        border-collapse: collapse;
+    }
+    table,th,td
+    {
+        border: 2px solid #333; /* 테두리 + 실선 */
+    }
+/* 
+    div{
+        color: blue;
+        background-color: brown;
+    } */
+     

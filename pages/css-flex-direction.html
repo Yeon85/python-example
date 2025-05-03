@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>flex-direction 예제</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row; /* ← 여기를 row, column, row-reverse 등으로 바꿔보세요 */
+      border: 2px solid #000;
+      padding: 10px;
+      gap: 10px;
+      height: 200px;
+    }
+
+    .item {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>flex-direction: row</h2>
+  <div class="container">
+    <div class="item">박스 1</div>
+    <div class="item">박스 2</div>
+    <div class="item">박스 3</div>
+  </div>
+
+</body>
+</html>

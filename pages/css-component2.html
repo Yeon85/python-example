@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 속성 예제</title>
+  <style>
+    .card {
+      color: white; /* 글자 색 */
+      background-color: #4caf50; /* 배경 색 */
+      border: 2px solid #333; /* 테두리 + 실선 */
+      border-radius: 10px; /* 둥근 테두리 */
+      width: 300px; /* 너비 */
+      height: 200px; /* 높이 */
+      display: flex; /* Flex 레이아웃 */
+      flex-direction: column; /* 세로 방향 */
+      justify-content: center; /* 세로축 가운데 */
+      align-items: center; /* 가로축 가운데 */
+      font-family: Arial, sans-serif; /* 글꼴 */
+      text-align: center; /* 글자 정렬 */
+      margin: 20px auto; /* 위아래 바깥 여백 + 가운데 정렬 */
+      padding: 20px; /* 안쪽 여백 */
+    }
+
+    .underline {
+      text-decoration: underline; /* 밑줄 */
+    }
+
+    .strike {
+      text-decoration: line-through; /* 취소선 */
+    }
+
+    .float-box {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background-color: #2196f3;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="float-box">float</div>
+
+  <div class="card">
+    <h2 class="underline">CSS 카드</h2>
+    <p class="strike">취소선 예제</p>
+    <p>텍스트와 레이아웃 정렬 완료!</p>
+  </div>
+
+  <div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #eee;
+">
+  <div style="background-color: tomato; padding: 20px;">🎯 가운데 정렬된 박스</div>
+</div>
+
+
+</body>
+</html>

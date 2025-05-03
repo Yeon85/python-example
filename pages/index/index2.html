@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📁 내 웹사이트 구조</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    li {
+      margin: 5px 0;
+    }
+    .folder::before {
+      content: "📁 ";
+    }
+    .file::before {
+      content: "📄 ";
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🌐 내 웹사이트 디렉토리 구조</h2>
+  <ul>
+    <li class="file"><a href="/index.html">index.html</a></li>
+    <li class="folder">css
+      <ul>
+        <li class="file"><a href="/css/style.css">style.css</a></li>
+      </ul>
+    </li>
+    <li class="folder">js
+      <ul>
+        <li class="file"><a href="/js/main.js">main.js</a></li>
+      </ul>
+    </li>
+    <li class="folder">pages
+      <ul>
+        <li class="file"><a href="/pages/about.html">about.html</a></li>
+        <li class="file"><a href="/pages/contact.html">contact.html</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <style>
+        div.important {
+            color: red;
+            font-weight: bold;
+        }
+        div.style {
+            background-color: yellow;
+        }
+
+        div > .style {
+            color: green;
+        }
+
+        div .style {
+            color: yellow;
+        }
+
+        div .style {
+            font-size: 18px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box important">4.후손 선택자 : 모두적용</div>
+
+  
+    
+
+
+  
+
+    <div>
+        <p class="style">✅ 적용됨</p>           <!-- 자식 -->
+        <section>
+          <p class="style">✅ 적용됨</p>         <!-- 손자 -->
+        </section>
+    </div>
+      
+      
+</body>
+</html>

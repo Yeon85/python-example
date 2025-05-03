@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>align-items 예제</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      border: 2px dashed gray;
+      height: 200px;
+      margin: 20px;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      background-color: tomato;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* 각각 다른 정렬 방식 */
+    .top {
+      align-items: flex-start;
+    }
+
+    .center {
+      align-items: center;
+    }
+
+    .bottom {
+      align-items: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>🔼 align-items: flex-start (위 정렬)</h3>
+  <div class="container top">
+    <div class="box">BOX</div>
+  </div>
+
+  <h3>🔽 align-items: center (가운데 정렬)</h3>
+  <div class="container center">
+    <div class="box">BOX</div>
+  </div>
+
+  <h3>🔻 align-items: flex-end (아래 정렬)</h3>
+  <div class="container bottom">
+    <div class="box">BOX</div>
+  </div>
+
+</body>
+</html>

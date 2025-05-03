@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>static vs relative</title>
+  <style>
+    .container {
+      border: 2px dashed gray;
+      padding: 20px;
+      height: 200px;
+    }
+
+    .box {
+      width: 120px;
+      height: 80px;
+      background-color: tomato;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .static {
+      position: static;
+      top: 200px;
+      left: 40px;
+    }
+
+    .relative {
+      position: relative;
+      top: 200px;
+      left: 40px;
+      background-color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>🔸 position: static (기본) "아무것도 안 함" → 그 자리에 그냥 놔둠</h3>
+  <div class="container">
+    <div class="box static">Static</div>
+  </div>
+
+  <h3>🔹 position: relative (이동 가능)"내 자리에서 조금 움직일게!" → 위치는 움직이지만, 원래 자리는 남아 있음</h3>
+  <div class="container">
+    <div class="box relative">Relative</div>
+  </div>
+
+</body>
+</html>

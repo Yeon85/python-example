@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>태그 사용법 정리</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4caf50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 HTML 태그 사용법 비교</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>태그 예시</th>
+        <th>설명</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>✅ 쌍태그<br>(닫는 태그 필요)</td>
+        <td>
+          <code>&lt;p&gt;문장&lt;/p&gt;</code><br>
+          <code>&lt;strong&gt;강조&lt;/strong&gt;</code>
+        </td>
+        <td>내용을 감싸는 태그로 시작태그와 종료태그가 모두 필요합니다.</td>
+      </tr>
+      <tr>
+        <td>✅ 단일태그<br>(닫는 태그 없음)</td>
+        <td>
+          <code>&lt;br/&gt;</code><br>
+          <code>&lt;img src="..."/&gt;</code><br>
+          <code>&lt;input type="text"/&gt;</code>
+        </td>
+        <td>내용이 없고, **자체적으로 닫히는 태그**입니다.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+ 
+</body>
+</html>

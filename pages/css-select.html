@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <style>
+        div.important {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* 일치선택자 */
+        div.style {
+            background-color: yellow;
+        }
+
+        /* 자식선택자 */
+        div > .style {
+            color: green;
+        }
+
+        /* 후손선택자 */
+        /* div .style {
+            color: yellow;
+        } */
+
+        div .style {
+            font-size: 18px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box important">1.복합 선택자 예제</div>
+
+    <!-- HTML -->
+    <div class="style">2.일치 선택자 예제</div>
+    <span class="style">이건 적용 안 됨</span>
+
+    
+
+
+    <div>
+        <p class="style">✅ 적용됨</p>         <!-- 바로 아래 자식이라 적용 -->
+        <section>
+          <p class="style">❌ 적용 안됨</p>    <!-- 손자(2단계)라서 적용 안됨 -->
+        </section>
+    </div>
+
+    <div>
+        <p class="style">✅ 적용됨</p>           <!-- 자식 -->
+        <section>
+          <p class="style">✅ 적용됨</p>         <!-- 손자 -->
+        </section>
+    </div>
+      
+      
+</body>
+</html>

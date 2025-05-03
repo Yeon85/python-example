@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>em vs rem 비교</title>
+  <style>
+    html {
+      font-size: 16px; /* rem 기준 (1rem = 16px) */
+    }
+
+    .wrapper {
+      padding: 20px;
+    }
+
+    .box {
+      margin: 20px 0;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .em-parent {
+      font-size: 20px; /* 이 안의 em은 20px 기준 */
+      background-color: #4caf50;
+    }
+
+    .em-child {
+      font-size: 2em;       /* 20px × 2 = 40px */
+      width: 10em;          /* 20px × 10 = 200px */
+      background-color: #2e7d32;
+    }
+
+    .rem-child {
+      font-size: 2rem;      /* 16px × 2 = 32px */
+      width: 10rem;         /* 16px × 10 = 160px */
+      background-color: #2196f3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h2>🟩 em 기준 박스 (부모의 font-size = 20px)</h2>
+    <div class="em-parent box">
+      부모 박스 (font-size: 20px)
+      <div class="em-child box">자식(em): font-size: 2em → 40px<br>width: 10em → 200px</div>
+    </div>
+
+    <h2>🟦 rem 기준 박스 (html의 font-size = 16px)</h2>
+    <div class="rem-child box">
+      rem: font-size: 2rem → 32px<br>width: 10rem → 160px
+    </div>
+    📌 정리 요약<br/>
+단위	풀네임	기준<br/>
+em	em square	자기 or 부모의 font-size<br/>
+rem	root em	html의 font-size 기준<br/>
+  </div>
+
+</body>
+</html>

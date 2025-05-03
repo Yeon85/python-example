@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          text-align: center;
+        }
+        th, td {
+          border: 1px solid #333;
+          padding: 10px;
+        }
+        thead {
+          background-color: #f2f2f2;
+        }
+        th {
+          background-color: #e0e0e0;
+        }
+        caption {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+    <div>
+        hi!
+    </div>
+    <div>
+        hello!
+    </div>
+    <span>hi!</span>
+    <span>hello</span>
+    <h1>h1 :숫자가 작으면 작을수록 글자가 커진다</h1>
+    <h2>h2 :숫자가 작으면 작을수록 글자가 커진다</h2>
+    <h3>h3 :숫자가 작으면 작을수록 글자가 커진다</h3>
+    <h4>h5 :숫자가 작으면 작을수록 글자가 커진다</h4>
+
+    <table>
+        <caption>📚 주간 시간표</caption>
+        <thead>
+          <tr>
+            <th>교시 / 요일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1교시</th>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JS</td>
+            <td>React</td>
+            <td>프로젝트</td>
+          </tr>
+          <tr>
+            <th>2교시</th>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JS</td>
+            <td>React</td>
+            <td>프로젝트</td>
+          </tr>
+          <tr>
+            <th>3교시</th>
+            <td colspan="5">🍽 점심시간</td>
+          </tr>
+          <tr>
+            <th>4교시</th>
+            <td>Node.js</td>
+            <td>DB</td>
+            <td>Express</td>
+            <td>API</td>
+            <td>프로젝트</td>
+          </tr>
+          <tr>
+            <th>5교시</th>
+            <td>Node.js</td>
+            <td>DB</td>
+            <td>Express</td>
+            <td>API</td>
+            <td>프로젝트</td>
+          </tr>
+        </tbody>
+      </table>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

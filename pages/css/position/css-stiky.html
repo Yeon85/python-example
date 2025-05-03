@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky 확실히 보이게</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 3000px; /* 전체 높이 늘려서 스크롤 충분히 */
+    }
+
+    .sticky-wrapper {
+      margin-top: 100px;
+      padding: 0 20px;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: #ff5722; /* 진한 주황색 */
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 999;
+      border-bottom: 3px solid #d84315;
+    }
+
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-wrapper">
+    <div class="sticky">📌 나는 sticky입니다! (스크롤 시 상단에 고정돼요)</div>
+
+    <div class="content">
+      <p>⬇️ 아래로 쭉 스크롤해보세요 ⬇️</p>
+      <!-- 더미 콘텐츠 추가 -->
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>이건 더미 텍스트입니다.</p>
+      <p>스크롤 계속 해보세요! sticky는 계속 위에 있어요!</p>
+      <p>🔁 sticky는 흘러가지 않고 화면 상단에 딱 고정됩니다!</p>
+      <p>끝까지 스크롤해도 여전히 고정!</p>
+    </div>
+  </div>
+
+</body>
+</html>

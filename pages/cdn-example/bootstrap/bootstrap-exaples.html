@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>부트스트랩 UI 예제</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+
+    <h1 class="mb-4 text-center fw-bold text-primary">🌟 부트스트랩 UI 예제 모음</h1>
+
+    <!-- ✅ 모달 예제 -->
+    <section class="mb-5">
+      <h2 class="text-success">1. 모달 (Modal)</h2>
+      <p>버튼을 클릭하면 팝업 창이 뜹니다.</p>
+      <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">모달 열기</button>
+
+      <!-- 모달 창 -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">부트스트랩 모달</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              안녕하세요! 👋<br>이것은 부트스트랩 모달 예제입니다.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ 그리드 레이아웃 예제 -->
+    <section class="mb-5">
+      <h2 class="text-success">2. 그리드 레이아웃 (Grid)</h2>
+      <p>3개의 열을 같은 비율로 나눈 그리드입니다.</p>
+      <div class="row text-white">
+        <div class="col-md-4 p-3 bg-primary text-center">왼쪽 열</div>
+        <div class="col-md-4 p-3 bg-success text-center">가운데 열</div>
+        <div class="col-md-4 p-3 bg-danger text-center">오른쪽 열</div>
+      </div>
+    </section>
+
+    <!-- ✅ 카드 갤러리 예제 -->
+    <section>
+      <h2 class="text-success">3. 카드 갤러리 (Card Gallery)</h2>
+      <p>이미지를 포함한 카드 3개를 한 줄에 정렬한 예제입니다.</p>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/1011/400/250" class="card-img-top" alt="샘플 이미지 1">
+            <div class="card-body">
+              <h5 class="card-title">자연</h5>
+              <p class="card-text">이곳은 아름다운 자연을 담은 카드입니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/1015/400/250" class="card-img-top" alt="샘플 이미지 2">
+            <div class="card-body">
+              <h5 class="card-title">산과 하늘</h5>
+              <p class="card-text">고요한 산과 구름 가득한 하늘이 조화를 이루네요.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://picsum.photos/id/1020/400/250" class="card-img-top" alt="샘플 이미지 3">
+            <div class="card-body">
+              <h5 class="card-title">호수</h5>
+              <p class="card-text">잔잔한 물결이 일렁이는 평화로운 호수입니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Step. 3 : CSS 정리</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    code {
+      background-color: #f2f2f2;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    pre {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-left: 5px solid #ccc;
+      white-space: pre-wrap;
+    }
+    .box {
+      background-color: lightyellow;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 Step. 3 : CSS</h1>
+
+  <h2>✅ CSS 적용 안될 경우?</h2>
+  <div class="box">
+    <strong>✔ HTML의 &lt;head&gt; 태그에서 CSS 파일이 연결되어 있는지 확인!</strong><br>
+    예: <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+  </div>
+
+  <h2>✅ CSS 기본 문법</h2>
+  <pre>
+div {
+  color: blue;
+}
+  </pre>
+  <ul>
+    <li><code>{ }</code> 중괄호 안에 스타일 작성</li>
+    <li><code>;</code>는 각 속성 선언의 끝에 붙임</li>
+  </ul>
+
+  <h2>✅ CSS 적용 방법</h2>
+  <ul>
+    <li><strong>HTML 태그에 직접 적용:</strong> <code>&lt;div style="color:blue"&gt;</code></li>
+    <li><strong>ID 선택자 (#):</strong> <code>#myId { ... }</code></li>
+    <li><strong>Class 선택자 (.):</strong> <code>.myClass { ... }</code></li>
+  </ul>
+
+  <h2>✅ ID vs CLASS 차이</h2>
+  <div class="box">
+    <ul>
+      <li><strong>ID:</strong> 문서 내에서 <u>한 번만</u> 사용</li>
+      <li><strong>CLASS:</strong> <u>여러 요소</u>에 반복 사용 가능</li>
+    </ul>
+  </div>
+
+  <h2>✅ 선택자 종류</h2>
+  <ul>
+    <li><strong>복합선택자</strong>: 여러 조건 조합</li>
+    <li><strong>일치선택자:</strong> <code>div.style { }</code></li>
+    <li><strong>자식선택자:</strong> <code>div > .style { }</code></li>
+    <li><strong>후손선택자:</strong> <code>div .style { }</code></li>
+  </ul>
+
+  <h2>✅ 자주 쓰이는 스타일 속성</h2>
+  <ul>
+    <li><code>color</code>: 글자 색</li>
+    <li><code>background-color</code>: 배경 색</li>
+    <li><code>border</code> / <code>border-radius</code>: 테두리 / 둥글게</li>
+    <li><code>solid</code>: 테두리 실선</li>
+    <li><code>width</code> / <code>height</code>: 너비 / 높이</li>
+    <li><code>display: flex</code>: 레이아웃 정렬</li>
+    <li><code>justify-content</code>: 주축 정렬</li>
+    <li><code>align-items</code>: 교차축 정렬</li>
+    <li><code>flex-direction</code>: 방향 설정</li>
+    <li><code>font-family</code>: 글꼴 지정</li>
+    <li><code>text-align</code>: 글자 정렬</li>
+    <li><code>margin</code> / <code>padding</code>: 바깥 여백 / 안쪽 여백</li>
+    <li><code>float</code>: 요소를 띄움</li>
+    <li><code>text-decoration</code>: 밑줄, 취소선 등</li>
+  </ul>
+
+  <h2>✅ 가상 클래스</h2>
+  <ul>
+    <li><code>:hover</code>: 마우스를 올렸을 때 효과</li>
+  </ul>
+
+  <h2>✅ position 속성</h2>
+  <ul>
+    <li><code>static</code>: 기본값 (기준 없음)</li>
+    <li><code>relative</code>: 자기 기준 위치 이동</li>
+    <li><code>absolute</code>: 가장 가까운 부모 기준</li>
+    <li><code>fixed</code>: 화면 기준 (스크롤에도 고정)</li>
+    <li><code>sticky</code>: 스크롤하다가 특정 위치에서 고정</li>
+  </ul>
+
+  <h2>✅ 단위 종류</h2>
+  <ul>
+    <li><code>px</code>: 픽셀</li>
+    <li><code>in</code>: 인치</li>
+    <li><code>%</code>: 상대 비율</li>
+    <li><code>vh</code>: 화면 높이 기준 비율</li>
+  </ul>
+
+  <h2>✅ 미디어쿼리 (반응형 웹)</h2>
+  <pre>
+@media (max-width: 600px) {
+  body {
+    background-color: lightgray;
+  }
+}
+  </pre>
+
+  <h2>📝 연습문제</h2>
+  <ol>
+    <li>아이디가 <code>myBox</code>인 div의 배경을 파란색으로 설정</li>
+    <li>클래스가 <code>highlight</code>인 요소의 텍스트를 빨간색으로</li>
+    <li>자식선택자와 후손선택자의 차이를 예시와 함께 설명</li>
+  </ol>
+</body>
+</html>
